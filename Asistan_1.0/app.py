@@ -22,12 +22,6 @@ def main():
 		while True:
 			data = input("Söylemek İstediğiniz Şeyi Yazınız: ")
 
-# Mert'in Özel İstekleri (Not: programı yayınlarsan bu alanı sil!)
-			if(data == "Hello"):
-				tts = gTTS(text = "Hivegi",lang="tr")
-				tts.save("audio.mp3")
-				playsound('audio.mp3')
-
 #Selamlaşma
 			elif(data == "Naber" or data == "naber"):
 				randsom = random.randint(1,5)
@@ -176,7 +170,7 @@ def main():
 
 			elif(data == "bana bir şarkı çal" or data == "Bana bir şarkı çal"):
 				#playsound('./Sound/Music/daydreamin.mp3')
-				number = random.randint(1,5)
+				number = random.randint(1,3)
 
 				if(number == 1):
 					print("Lupe Fiasco - Daydreamin'")
@@ -185,9 +179,6 @@ def main():
 					print("Neil Diamond - If you go away")
 					playsound('./Sound/Music/IfYouGoAway-NeilDiamond.mp3')
 				elif(number == 3):
-					print("Mozart - Symphony No.40")
-					playsound('./Sound/Music/mozartsymphony40.mp3')
-				elif(number == 4):
 					print("Khontkar - Geldiğim yer")
 					playsound('./Sound/Music/geldigimyer.mp3')
 				else:
