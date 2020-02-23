@@ -187,7 +187,13 @@ def main():
 # Hava Durumu
 			elif(data == "hava durumu" or data == "Hava durumu" or data == "hava durumunu göster" or data == "Hava durumunu göster"):
 				def hava():
-					parse = feedparser.parse("http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=Asia|Turkey|16450|Bursa")
+					kita = input("Bulunduğunuz Kıtayı Yazınız: ")
+					ulke = input("Yaşadığınız Ülkeyi Yazınız: ")
+                			postacode = input("Posta Kodunuzu Yazınız: ")
+                			sehir = input("Yaşadığınız Şehri Yazınız: ")
+					print("\nNot: hava durumu için konum bilgilerinizi ingilizce yazmanız gerekmektedir.\n")
+					
+					parse = feedparser.parse("http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode="+kita+"|"+ulke+"|"+postacode+"|"+sehir)
 					parse = parse["entries"][0]["summary"]
 					parse = parse.split()
 					print(parse[2],parse[4],parse[5])
